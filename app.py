@@ -11,6 +11,8 @@ import numpy as np
 from PIL import Image
 import io
 import torch
+# import torch ke baad ye check add karo
+print(f"PyTorch version: {torch.__version__}")
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 
 # Page config
