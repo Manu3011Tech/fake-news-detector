@@ -1,21 +1,20 @@
-# Virtual Environment
-.venv/
-venv/
-env/
-ENV/
-env.bak/
-venv.bak/
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+*.pyc
+*.pyo
+*.pyd
 
-# Models (optional - agar push nahi karna hai toh)
-# models/*.pkl
-# models/*.pth
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
 
 # IDE
 .vscode/
@@ -23,32 +22,57 @@ __pycache__/
 *.swp
 *.swo
 *~
-
-# OS
 .DS_Store
-Thumbs.db
-desktop.ini
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Model files (already downloaded separately)
+models/image_model/
+models/image_processor/
+models/*.pth
+models/*.h5
+
+# But keep text model (small)
+!models/text_model.pkl
 
 # Logs
 *.log
 logs/
+*.pid
 
 # Database
 *.db
 *.sqlite
+*.sqlite3
 
 # Environment variables
 .env
 .env.local
-
-# Jupyter Notebook
-.ipynb_checkpoints/
-
-# Uploads
-uploads/
-temp/
+.env.*.local
 
 # Testing
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
+.mypy_cache/
+
+# Uploads
+uploads/
+temp/
+temp_images/
+
+# OS
+Thumbs.db
+desktop.ini
+ehthumbs.db
+.DS_Store
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Hugging Face cache
+.cache/
+huggingface/
